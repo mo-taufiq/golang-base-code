@@ -1,0 +1,4 @@
+.env
+*.log
+go.mod
+go.sum
