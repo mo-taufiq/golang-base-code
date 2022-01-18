@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	gologger "github.com/mo-taufiq/go-logger"
 	"github.com/spf13/cast"
-	jsonWebToken "taufiq.code/golang-base-code/helper/jasonWebToken"
+	jsonWebToken "taufiq.code/golang-base-code/helper/jsonWebToken"
 	"taufiq.code/golang-base-code/helper/responseCode"
 )
 

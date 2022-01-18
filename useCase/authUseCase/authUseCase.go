@@ -6,7 +6,7 @@ import (
 	"github.com/golang-jwt/jwt"
 	"gorm.io/gorm"
 	"taufiq.code/golang-base-code/helper/encryption"
-	jsonWebToken "taufiq.code/golang-base-code/helper/jasonWebToken"
+	jsonWebToken "taufiq.code/golang-base-code/helper/jsonWebToken"
 	"taufiq.code/golang-base-code/model/userModel"
 	"taufiq.code/golang-base-code/repository/userRepository"
 )
