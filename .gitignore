@@ -2,3 +2,4 @@
 *.log
 go.mod
 go.sum
+go-app-binary
