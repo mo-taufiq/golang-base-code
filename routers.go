@@ -38,4 +38,9 @@ func Routers(router *gin.Engine, db *gorm.DB, rc *redis.Client) {
 	{
 		authRoute.POST("sign-in", delivery.AuthDelivery.AuthSignIn)
 	}
+
+	documentRoute := router.Group("api/v1/document")
+	{
+		documentRoute.GET("pdf/invoice", delivery.DocumentDelivery.GetInvoicePDF)
+	}
 }
