@@ -65,7 +65,7 @@ var GlobalVariable = Global{}
 
 func init() {
 	// load environment configuration file
-	err := godotenv.Load(".env")
+	err := godotenv.Load(os.Getenv("ENV"))
 	if err != nil {
 		fmt.Println(err)
 	}
