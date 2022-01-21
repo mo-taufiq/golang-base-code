@@ -7,8 +7,9 @@ RUN apk add --no-cache bash
 
 WORKDIR /app
 
+COPY bin ./bin
 COPY migrations ./migrations
-COPY .env ./
+COPY env-production.env ./
 COPY go-app-binary ./
 
 ENTRYPOINT ["/app/go-app-binary"]
