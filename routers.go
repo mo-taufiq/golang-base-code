@@ -42,5 +42,6 @@ func Routers(router *gin.Engine, db *gorm.DB, rc *redis.Client) {
 	documentRoute := router.Group("api/v1/document")
 	{
 		documentRoute.GET("pdf/invoice", delivery.DocumentDelivery.GetInvoicePDF)
+		documentRoute.GET("excel/invoice", delivery.DocumentDelivery.GetInvoiceExcel)
 	}
 }
