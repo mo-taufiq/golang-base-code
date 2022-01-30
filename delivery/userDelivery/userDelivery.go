@@ -4,11 +4,13 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	gologger "github.com/mo-taufiq/go-logger"
 	"github.com/spf13/cast"
 	"github.com/thedevsaddam/govalidator"
 	"github.com/ulule/deepcopier"
 	"gorm.io/gorm"
+	"taufiq.code/golang-base-code/helper/input"
 	"taufiq.code/golang-base-code/helper/pagination"
 	"taufiq.code/golang-base-code/helper/request"
 	"taufiq.code/golang-base-code/helper/responseCode"
@@ -21,6 +23,7 @@ type IUserDelivery interface {
 	DeleteUser(c *gin.Context)
 	UpdateUser(c *gin.Context)
 	GetUser(c *gin.Context)
+	UploadProfileImage(c *gin.Context)
 }
 
 type UserDelivery struct {
@@ -177,5 +180,27 @@ func (u *UserDelivery) GetUser(c *gin.Context) {
 			"pagination": pagination,
 		},
 		"message": "Successfully get user data.",
+	})
+}
+
+func (u *UserDelivery) UploadProfileImage(c *gin.Context) {
+	uuid := uuid.New()
+	err := input.File(c, "profile_image", "./assets/public/images/profile", cast.ToString(uuid))
+	if err != nil {
+		gologger.Error(err.Error())
+		c.JSON(http.StatusOK, gin.H{
+			"response": responseCode.OK,
+			"error":    err.Error(),
+			"data":     nil,
+			"message":  "Failed to upload profile image.",
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"response": responseCode.OK,
+		"error":    nil,
+		"data":     nil,
+		"message":  "Successfully upload profile image.",
 	})
 }

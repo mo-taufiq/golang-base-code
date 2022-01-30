@@ -32,6 +32,7 @@ func Routers(router *gin.Engine, db *gorm.DB, rc *redis.Client) {
 		userRoute.PUT("", delivery.UserDelivery.UpdateUser)
 		userRoute.DELETE(":id", delivery.UserDelivery.DeleteUser)
 		userRoute.GET("", delivery.UserDelivery.GetUser)
+		userRoute.POST("upload-profile-image", delivery.UserDelivery.UploadProfileImage)
 	}
 
 	authRoute := router.Group("api/v1/auth")

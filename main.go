@@ -101,13 +101,12 @@ func init() {
 	}
 
 	// setting log configuration
-	gologger.LogConf = gologger.LogConfiguration{
-		DebugMode:           GlobalVariable.DebugMode,
-		Path:                GlobalVariable.Log.Path,
-		TimeZone:            GlobalVariable.Log.TimeZone,
-		NestedFuncLevel:     GlobalVariable.Log.NestedFuncLevel,
-		NestedLocationLevel: GlobalVariable.Log.NestedLocationLevel,
-	}
+	gologger.LogConf.DebugMode = GlobalVariable.DebugMode
+	gologger.LogConf.Path = GlobalVariable.Log.Path
+	gologger.LogConf.TimeZone = GlobalVariable.Log.TimeZone
+	gologger.LogConf.NestedFuncLevel = GlobalVariable.Log.NestedFuncLevel
+	gologger.LogConf.NestedLocationLevel = GlobalVariable.Log.NestedLocationLevel
+	gologger.LogConf.LogFuncName = true
 
 	// handle migration
 	migrationSetting()
@@ -121,8 +120,8 @@ func main() {
 	// handle redis
 	rc := redisConnection()
 
-	// router := gin.New()
-	router := gin.Default() // with log hit history
+	router := gin.New()
+	// router := gin.Default() // with log hit history
 
 	Routers(router, db, rc)
 
