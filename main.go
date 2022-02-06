@@ -64,8 +64,12 @@ type Global struct {
 var GlobalVariable = Global{}
 
 func init() {
+	ENVFile := os.Getenv("ENV")
+	if ENVFile == "" {
+		ENVFile = "env-development.env"
+	}
 	// load environment configuration file
-	err := godotenv.Load(os.Getenv("ENV"))
+	err := godotenv.Load(ENVFile)
 	if err != nil {
 		fmt.Println(err)
 	}
