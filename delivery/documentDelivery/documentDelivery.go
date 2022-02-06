@@ -3,12 +3,13 @@ package documentDelivery
 import (
 	"net/http"
 
+	"golang-base-code/helper/document/excel"
+	"golang-base-code/helper/document/pdf"
+	"golang-base-code/useCase"
+
 	"github.com/gin-gonic/gin"
 	gologger "github.com/mo-taufiq/go-logger"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/document/excel"
-	"taufiq.code/golang-base-code/helper/document/pdf"
-	"taufiq.code/golang-base-code/useCase"
 )
 
 type IDocumentDelivery interface {

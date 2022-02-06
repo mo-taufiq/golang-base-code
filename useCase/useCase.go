@@ -1,9 +1,10 @@
 package useCase
 
 import (
+	"golang-base-code/useCase/authUseCase"
+	"golang-base-code/useCase/userUseCase"
+
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/useCase/authUseCase"
-	"taufiq.code/golang-base-code/useCase/userUseCase"
 )
 
 type UseCase struct {

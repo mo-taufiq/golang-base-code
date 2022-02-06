@@ -3,6 +3,13 @@ package userDelivery
 import (
 	"net/http"
 
+	"golang-base-code/helper/input"
+	"golang-base-code/helper/pagination"
+	"golang-base-code/helper/request"
+	"golang-base-code/helper/responseCode"
+	"golang-base-code/model/userModel"
+	"golang-base-code/useCase"
+
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	gologger "github.com/mo-taufiq/go-logger"
@@ -10,12 +17,6 @@ import (
 	"github.com/thedevsaddam/govalidator"
 	"github.com/ulule/deepcopier"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/input"
-	"taufiq.code/golang-base-code/helper/pagination"
-	"taufiq.code/golang-base-code/helper/request"
-	"taufiq.code/golang-base-code/helper/responseCode"
-	"taufiq.code/golang-base-code/model/userModel"
-	"taufiq.code/golang-base-code/useCase"
 )
 
 type IUserDelivery interface {

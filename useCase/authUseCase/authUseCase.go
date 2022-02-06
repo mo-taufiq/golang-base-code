@@ -3,12 +3,13 @@ package authUseCase
 import (
 	"errors"
 
+	"golang-base-code/helper/encryption"
+	jsonWebToken "golang-base-code/helper/jsonWebToken"
+	"golang-base-code/model/userModel"
+	"golang-base-code/repository/userRepository"
+
 	"github.com/golang-jwt/jwt"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/encryption"
-	jsonWebToken "taufiq.code/golang-base-code/helper/jsonWebToken"
-	"taufiq.code/golang-base-code/model/userModel"
-	"taufiq.code/golang-base-code/repository/userRepository"
 )
 
 type IAuthUseCase interface {

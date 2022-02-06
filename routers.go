@@ -3,11 +3,12 @@ package main
 import (
 	"net/http"
 
+	"golang-base-code/delivery"
+	"golang-base-code/middleware"
+
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/delivery"
-	"taufiq.code/golang-base-code/middleware"
 )
 
 func Routers(router *gin.Engine, db *gorm.DB, rc *redis.Client) {

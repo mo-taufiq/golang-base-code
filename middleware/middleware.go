@@ -1,8 +1,9 @@
 package middleware
 
 import (
+	"golang-base-code/middleware/authMiddleware"
+
 	"github.com/go-redis/redis/v8"
-	"taufiq.code/golang-base-code/middleware/authMiddleware"
 )
 
 type Middleware struct {

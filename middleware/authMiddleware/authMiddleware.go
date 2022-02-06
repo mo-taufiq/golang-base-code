@@ -6,11 +6,12 @@ import (
 	"net/http"
 	"strings"
 
+	jsonWebToken "golang-base-code/helper/jsonWebToken"
+	"golang-base-code/helper/responseCode"
+
 	"github.com/gin-gonic/gin"
 	gologger "github.com/mo-taufiq/go-logger"
 	"github.com/spf13/cast"
-	jsonWebToken "taufiq.code/golang-base-code/helper/jsonWebToken"
-	"taufiq.code/golang-base-code/helper/responseCode"
 )
 
 type IAuthMiddleware interface {

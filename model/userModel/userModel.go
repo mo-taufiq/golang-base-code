@@ -1,11 +1,12 @@
 package userModel
 
 import (
+	"golang-base-code/helper/encryption"
+	"golang-base-code/model"
+	"golang-base-code/model/roleModel"
+
 	"github.com/spf13/cast"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/encryption"
-	"taufiq.code/golang-base-code/model"
-	"taufiq.code/golang-base-code/model/roleModel"
 )
 
 type UserFilter struct {

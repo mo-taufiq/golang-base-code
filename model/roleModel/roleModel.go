@@ -1,7 +1,7 @@
 package roleModel
 
 import (
-	"taufiq.code/golang-base-code/model"
+	"golang-base-code/model"
 )
 
 type Role struct {

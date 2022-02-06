@@ -3,14 +3,15 @@ package authDelivery
 import (
 	"net/http"
 
+	"golang-base-code/helper/request"
+	"golang-base-code/helper/responseCode"
+	"golang-base-code/model/userModel"
+	"golang-base-code/useCase"
+
 	"github.com/gin-gonic/gin"
 	gologger "github.com/mo-taufiq/go-logger"
 	"github.com/thedevsaddam/govalidator"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/request"
-	"taufiq.code/golang-base-code/helper/responseCode"
-	"taufiq.code/golang-base-code/model/userModel"
-	"taufiq.code/golang-base-code/useCase"
 )
 
 type IAuthDelivery interface {

@@ -1,10 +1,11 @@
 package delivery
 
 import (
+	"golang-base-code/delivery/authDelivery"
+	"golang-base-code/delivery/documentDelivery"
+	"golang-base-code/delivery/userDelivery"
+
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/delivery/authDelivery"
-	"taufiq.code/golang-base-code/delivery/documentDelivery"
-	"taufiq.code/golang-base-code/delivery/userDelivery"
 )
 
 type Delivery struct {

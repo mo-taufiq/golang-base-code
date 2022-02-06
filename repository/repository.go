@@ -1,8 +1,9 @@
 package repository
 
 import (
+	"golang-base-code/repository/userRepository"
+
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/repository/userRepository"
 )
 
 type Repository struct {

@@ -5,13 +5,14 @@ import (
 	"sort"
 	"strings"
 
+	"golang-base-code/helper/array"
+	jsonHelper "golang-base-code/helper/json"
+	"golang-base-code/helper/pagination"
+	"golang-base-code/model/userModel"
+	"golang-base-code/repository/userRepository"
+
 	gologger "github.com/mo-taufiq/go-logger"
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/array"
-	jsonHelper "taufiq.code/golang-base-code/helper/json"
-	"taufiq.code/golang-base-code/helper/pagination"
-	"taufiq.code/golang-base-code/model/userModel"
-	"taufiq.code/golang-base-code/repository/userRepository"
 )
 
 type IUserUseCase interface {

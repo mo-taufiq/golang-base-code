@@ -10,11 +10,12 @@ import (
 
 	_ "image/png"
 
+	"golang-base-code/helper/file"
+
 	"github.com/disintegration/imaging"
 	"github.com/gin-gonic/gin"
 	gologger "github.com/mo-taufiq/go-logger"
 	"github.com/spf13/cast"
-	"taufiq.code/golang-base-code/helper/file"
 )
 
 func File(c *gin.Context, inputName, fileStoragePath, fileName string) error {

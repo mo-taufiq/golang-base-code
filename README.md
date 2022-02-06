@@ -12,8 +12,6 @@
     code -n golang-base-code
     ```
 
-- Inside `Visual Studio Code`, replace all the words `taufiq.code/golang-base-code` to `<your local directory>/golang-base-code`.
-
 - copy file `example.env` and rename it to `.env` then adjust the environment value according to your environment.
 
 - Open new terminal inside `Visual Studio Code`, then run this command in the terminal.

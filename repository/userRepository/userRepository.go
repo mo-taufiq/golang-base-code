@@ -3,9 +3,10 @@ package userRepository
 import (
 	"fmt"
 
+	"golang-base-code/helper/pagination"
+	"golang-base-code/model/userModel"
+
 	"gorm.io/gorm"
-	"taufiq.code/golang-base-code/helper/pagination"
-	"taufiq.code/golang-base-code/model/userModel"
 )
 
 type IUserRepository interface {

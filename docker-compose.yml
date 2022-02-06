@@ -31,7 +31,7 @@ services:
     environment:
       - ENV=env-production.env
     volumes:
-      - "/Users/motaufiqurohman/go/src/taufiq.code/golang-base-code/logs:/app/logs"
+      - "/Users/motaufiqurohman/go/src/golang-base-code/logs:/app/logs"
     networks:
       - app_network
     restart: on-failure
