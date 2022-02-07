@@ -1,6 +1,8 @@
+#!/bin/bash
 #!/bin/sh
 
 # export GIN_MODE=release
+export CGO_ENABLED=0
 export GOOS=linux
 go build -o go-app-binary
 
@@ -10,4 +12,4 @@ docker rmi go-app:latest
 
 docker build --tag go-app .
 
-docker compose up -d
+docker-compose up -d
