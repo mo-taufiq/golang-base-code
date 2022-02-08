@@ -1,6 +1,8 @@
 #!/bin/bash
 #!/bin/sh
 
+git pull origin main
+
 # export GIN_MODE=release
 export CGO_ENABLED=0
 export GOOS=linux
